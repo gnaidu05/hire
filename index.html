@@ -341,6 +341,34 @@
   @keyframes afade{to{opacity:1}}
   @keyframes dotpop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
 
+  .imp-h{font-family:var(--font-display);font-weight:500;font-size:clamp(1.1rem,2.2vw,1.4rem);margin:var(--space-6) 0 var(--space-4);color:var(--muted);max-width:30ch}
+  .impact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+  @media(min-width:760px){.impact-grid{grid-template-columns:repeat(3,1fr)}}
+  .imp{background:var(--surface);padding:var(--space-4) var(--space-3);display:flex;flex-direction:column;gap:8px;transition:background .25s}
+  .imp:hover{background:var(--accent-wash)}
+  .imp-n{font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,4.4vw,2.6rem);letter-spacing:-0.04em;line-height:1;display:flex;align-items:baseline;gap:1px}
+  .imp-n .sfx{font-size:.46em;font-weight:600;color:var(--accent)}
+  .imp-k{font-size:13px;color:var(--muted);line-height:1.42}
+
+  .xp{margin-top:var(--space-6)}
+  .xp-h{font-family:var(--font-display);font-weight:500;font-size:clamp(1.2rem,2.6vw,1.6rem);margin-bottom:var(--space-4);max-width:24ch;letter-spacing:-0.02em}
+  .timeline{list-style:none;position:relative;padding-left:28px}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .timeline li{position:relative;padding-bottom:var(--space-4)}
+  .timeline li:last-child{padding-bottom:0}
+  .timeline li::before{content:"";position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);box-shadow:0 0 0 4px var(--paper)}
+  .timeline li:first-child::before{background:var(--accent)}
+  .tl-when{font-family:var(--font-display);font-weight:600;font-size:12.5px;color:var(--accent);letter-spacing:.01em}
+  .tl-what{font-family:var(--font-display);font-weight:500;font-size:16px;margin-top:3px}
+  .tl-where{font-size:13.5px;color:var(--muted);margin-top:2px}
+  .xp-sub{font-size:13px;color:var(--faint);font-weight:600;margin:var(--space-5) 0 var(--space-3)}
+  .awards{display:flex;flex-wrap:wrap;gap:12px}
+  .award{display:flex;align-items:center;gap:11px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 15px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease),box-shadow .25s}
+  .award:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .award svg{width:20px;height:20px;color:var(--accent);flex:none}
+  .award .aw-t{font-family:var(--font-display);font-weight:600;font-size:14px}
+  .award .aw-s{font-size:12px;color:var(--faint);margin-top:2px}
+
   .rise{opacity:0;transform:translateY(24px)}
   .rise.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
   @media(prefers-reduced-motion:reduce){
@@ -469,6 +497,16 @@
           <span class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7 17 17M17 9v8H9"/></svg>down from 18%</span>
           <p class="rd">Reliance on external hiring vendors fell from 18% to 2% — cutting cost while keeping candidate quality in-house.</p>
         </div>
+      </div>
+
+      <h3 class="imp-h rise">And a wider track record, by the numbers.</h3>
+      <div class="impact-grid">
+        <div class="imp rise"><span class="imp-n"><span data-count="3100">0</span></span><span class="imp-k">offers from one 2-day mega drive — 30K walk-ins across 7 cities</span></div>
+        <div class="imp rise"><span class="imp-n"><span data-count="85">0</span><span class="sfx">K+</span></span><span class="imp-k">assessments run in 8 days, multi-vendor and zone-wise</span></div>
+        <div class="imp rise"><span class="imp-n"><span data-count="15">0</span><span class="sfx">%</span></span><span class="imp-k">faster university hiring after going 100% digital</span></div>
+        <div class="imp rise"><span class="imp-n"><span data-count="18">0</span><span class="sfx">&nbsp;FTEs</span></span><span class="imp-k">of bandwidth freed by bots in the TA pipeline</span></div>
+        <div class="imp rise"><span class="imp-n"><span data-count="66">0</span><span class="sfx">K</span></span><span class="imp-k">webinar registrations across 55 sessions, 83% attendance</span></div>
+        <div class="imp rise"><span class="imp-n"><span data-count="54490">0</span></span><span class="imp-k">alumni reached; 1,709 re-hired in 4 months via Circle</span></div>
       </div>
     </div>
   </section>
@@ -650,6 +688,23 @@
           <div class="cred rise"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span><span class="ct"><b>Published author</b> — <i>The Unspoken Bloom</i>, Notion Press (2026).</span></div>
         </div>
       </div>
+
+      <div class="xp">
+        <h3 class="xp-h rise">Two decades across design, IT &amp; security, and talent.</h3>
+        <ol class="timeline">
+          <li class="rise"><div class="tl-when">2014 — Now</div><div class="tl-what">Talent Branding &amp; Operations Manager</div><div class="tl-where">Capgemini India</div></li>
+          <li class="rise"><div class="tl-when">2006 — 2014</div><div class="tl-what">Manager IT — Information Systems &amp; Security</div><div class="tl-where">PayMate India</div></li>
+          <li class="rise"><div class="tl-when">2005 — 2006</div><div class="tl-what">Graphic Designer</div><div class="tl-where">Nazara Technologies</div></li>
+          <li class="rise"><div class="tl-when">2003 — 2005</div><div class="tl-what">Graphic Designer &amp; System Administrator</div><div class="tl-where">ZICA · ITM</div></li>
+        </ol>
+
+        <p class="xp-sub rise">Recognition</p>
+        <div class="awards rise">
+          <div class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><div><div class="aw-t">Xtramile Award</div><div class="aw-s">2020 · campus hiring enhancements</div></div></div>
+          <div class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><div><div class="aw-t">Team Excellence Award</div><div class="aw-s">2020 · fresher hiring transformation</div></div></div>
+          <div class="award"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg><div><div class="aw-t">Star Award</div><div class="aw-s">2014 · RPL 1.0 gamified referrals</div></div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -768,8 +823,8 @@
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     var nums=[].slice.call(document.querySelectorAll('[data-count]'));
     function run(el){var target=+el.getAttribute('data-count'),start=null,dur=1100;
-      if(reduce){el.textContent=target;return}
-      function step(ts){if(!start)start=ts;var pr=Math.min((ts-start)/dur,1);var e=1-Math.pow(1-pr,3);el.textContent=Math.round(e*target);if(pr<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+      if(reduce){el.textContent=target.toLocaleString();return}
+      function step(ts){if(!start)start=ts;var pr=Math.min((ts-start)/dur,1);var e=1-Math.pow(1-pr,3);el.textContent=Math.round(e*target).toLocaleString();if(pr<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
     if(!('IntersectionObserver'in window)){nums.forEach(run);return}
     var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.6});
     nums.forEach(function(n){io.observe(n)});
