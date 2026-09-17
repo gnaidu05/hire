@@ -369,6 +369,13 @@
   .award .aw-t{font-family:var(--font-display);font-weight:600;font-size:14px}
   .award .aw-s{font-size:12px;color:var(--faint);margin-top:2px}
 
+  .cert--extra{display:none}
+  .cert-more-wrap{display:flex;justify-content:center;margin-top:var(--space-4)}
+  .cert-more{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-body);font-size:14.5px;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;padding:12px 24px;cursor:pointer;transition:border-color .2s,background .2s;min-height:48px}
+  .cert-more:hover{border-color:var(--accent);background:var(--accent-wash)}
+  .cert-more svg{width:15px;height:15px;transition:transform .25s var(--ease)}
+  .cert-more.open svg{transform:rotate(180deg)}
+
   .rise{opacity:0;transform:translateY(24px)}
   .rise.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
   @media(prefers-reduced-motion:reduce){
@@ -733,44 +740,50 @@
         <article class="cert" data-cat="ai"><span class="cb">F</span><div><div class="cn">GenAI for Everyone</div><div class="cm">Fractal Analytics · Aug 2025</div></div></article>
         <article class="cert" data-cat="ai"><span class="cb">C</span><div><div class="cn">Google AI Essentials</div><div class="cm">Coursera · Oct 2024</div></div></article>
         <article class="cert" data-cat="ai"><span class="cb">GC</span><div><div class="cn">Introduction to Generative AI Studio</div><div class="cm">Google Cloud · Apr 2024</div></div></article>
-        <article class="cert" data-cat="ai"><span class="cb">G</span><div><div class="cn">Introduction to Responsible AI</div><div class="cm">Google · Oct 2023</div></div></article>
-        <article class="cert" data-cat="ai"><span class="cb">C</span><div><div class="cn">Prompt Engineering for ChatGPT</div><div class="cm">Coursera · Oct 2023</div></div></article>
-        <article class="cert" data-cat="ai"><span class="cb">C</span><div><div class="cn">ChatGPT Playground for Beginners: Intro to NLP AI</div><div class="cm">Coursera · Sep 2023</div></div></article>
-        <article class="cert" data-cat="ai"><span class="cb">G</span><div><div class="cn">Introduction to Generative AI</div><div class="cm">Google · Aug 2023</div></div></article>
-        <article class="cert" data-cat="ai"><span class="cb">GL</span><div><div class="cn">ChatGPT for Beginners</div><div class="cm">Great Learning · Aug 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="ai"><span class="cb">G</span><div><div class="cn">Introduction to Responsible AI</div><div class="cm">Google · Oct 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="ai"><span class="cb">C</span><div><div class="cn">Prompt Engineering for ChatGPT</div><div class="cm">Coursera · Oct 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="ai"><span class="cb">C</span><div><div class="cn">ChatGPT Playground for Beginners: Intro to NLP AI</div><div class="cm">Coursera · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="ai"><span class="cb">G</span><div><div class="cn">Introduction to Generative AI</div><div class="cm">Google · Aug 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="ai"><span class="cb">GL</span><div><div class="cn">ChatGPT for Beginners</div><div class="cm">Great Learning · Aug 2023</div></div></article>
 
         <article class="cert" data-cat="security"><span class="cb">EC</span><div><div class="cn">Digital Forensics Essentials (DFE)</div><div class="cm">EC-Council · Oct 2024</div></div></article>
         <article class="cert" data-cat="security"><span class="cb">IS</span><div><div class="cn">Cyber Crime Intervention Officer (CCIO)</div><div class="cm">ISAC · Sep 2023 <span class="lic">Valid to 2026</span></div></div></article>
         <article class="cert" data-cat="security"><span class="cb">I²</span><div><div class="cn">(ISC)² Candidate</div><div class="cm">ISC2 · Sep 2023</div></div></article>
 
-        <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Project Management Tracker using Microsoft Excel</div><div class="cm">Coursera · Jun 2024</div></div></article>
-        <article class="cert" data-cat="data"><span class="cb">Y</span><div><div class="cn">Business Analysis — Certificate of Completion</div><div class="cm">YESI Education · Jul 2024</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">C</span><div><div class="cn">Project Management Tracker using Microsoft Excel</div><div class="cm">Coursera · Jun 2024</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">Y</span><div><div class="cn">Business Analysis — Certificate of Completion</div><div class="cm">YESI Education · Jul 2024</div></div></article>
         <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Build Dashboards in Power BI</div><div class="cm">Coursera · Nov 2023</div></div></article>
-        <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Power BI Report Development Crash Course</div><div class="cm">Coursera · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">C</span><div><div class="cn">Power BI Report Development Crash Course</div><div class="cm">Coursera · Sep 2023</div></div></article>
         <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">HR Analytics — HR Dashboard using Power BI</div><div class="cm">Coursera · Sep 2023</div></div></article>
-        <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Getting Started with Power BI Desktop</div><div class="cm">Coursera · Sep 2023</div></div></article>
-        <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Introduction to Data Analysis using Microsoft Excel</div><div class="cm">Coursera · Sep 2023</div></div></article>
-        <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Business Analysis using Spreadsheets: Basics</div><div class="cm">Coursera · Sep 2023</div></div></article>
-        <article class="cert" data-cat="data"><span class="cb">C</span><div><div class="cn">Business Analysis &amp; Process Management</div><div class="cm">Coursera · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">C</span><div><div class="cn">Getting Started with Power BI Desktop</div><div class="cm">Coursera · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">C</span><div><div class="cn">Introduction to Data Analysis using Microsoft Excel</div><div class="cm">Coursera · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">C</span><div><div class="cn">Business Analysis using Spreadsheets: Basics</div><div class="cm">Coursera · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="data"><span class="cb">C</span><div><div class="cn">Business Analysis &amp; Process Management</div><div class="cm">Coursera · Sep 2023</div></div></article>
 
         <article class="cert" data-cat="talent"><span class="cb">N</span><div><div class="cn">Naukri Maestro Recruiter</div><div class="cm">Naukri.com · Mar 2025</div></div></article>
         <article class="cert" data-cat="talent"><span class="cb">U</span><div><div class="cn">Uncovering Unconscious Bias in Recruiting</div><div class="cm">Udemy · Dec 2024</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">U</span><div><div class="cn">Developing Emotional Resilience to Manage Stress</div><div class="cm">Udemy · Jul 2024</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">AC</span><div><div class="cn">Professional Ethics at Workplace</div><div class="cm">AICTE NEAT · Sep 2023</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Developing Employees</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Coaching</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Difficult Interactions</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Diversity</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Feedback Essentials</div><div class="cm">Harvard Business · Jul 2020</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">U</span><div><div class="cn">Developing Emotional Resilience to Manage Stress</div><div class="cm">Udemy · Jul 2024</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">AC</span><div><div class="cn">Professional Ethics at Workplace</div><div class="cm">AICTE NEAT · Sep 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Developing Employees</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Coaching</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Difficult Interactions</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Diversity</div><div class="cm">Harvard Business · Sep 2020</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Feedback Essentials</div><div class="cm">Harvard Business · Jul 2020</div></div></article>
         <article class="cert" data-cat="talent"><span class="cb">H</span><div><div class="cn">Harvard ManageMentor — Leading People</div><div class="cm">Harvard Business · Jul 2020</div></div></article>
-        <article class="cert" data-cat="talent"><span class="cb">BC</span><div><div class="cn">CEFR — English Proficiency</div><div class="cm">British Council · Sep 2019</div></div></article>
+        <article class="cert cert--extra" data-cat="talent"><span class="cb">BC</span><div><div class="cn">CEFR — English Proficiency</div><div class="cm">British Council · Sep 2019</div></div></article>
 
-        <article class="cert" data-cat="other"><span class="cb">C</span><div><div class="cn">Get Started with Figma</div><div class="cm">Coursera · Apr 2024</div></div></article>
-        <article class="cert" data-cat="other"><span class="cb">CN</span><div><div class="cn">Introduction to Photoshop — Advanced</div><div class="cm">CareerNinja · Aug 2023</div></div></article>
-        <article class="cert" data-cat="other"><span class="cb">AW</span><div><div class="cn">AWS Technical Professional</div><div class="cm">Amazon Web Services</div></div></article>
-        <article class="cert" data-cat="other"><span class="cb">JU</span><div><div class="cn">Marketing Fundamentals</div><div class="cm">Jobs University · Jul 2020</div></div></article>
-        <article class="cert" data-cat="other"><span class="cb">G</span><div><div class="cn">AdWords Mobile Certification</div><div class="cm">Google · Apr 2017</div></div></article>
-        <article class="cert" data-cat="other"><span class="cb">G</span><div><div class="cn">The Online Marketing Fundamentals</div><div class="cm">Google</div></div></article>
+        <article class="cert cert--extra" data-cat="other"><span class="cb">C</span><div><div class="cn">Get Started with Figma</div><div class="cm">Coursera · Apr 2024</div></div></article>
+        <article class="cert cert--extra" data-cat="other"><span class="cb">CN</span><div><div class="cn">Introduction to Photoshop — Advanced</div><div class="cm">CareerNinja · Aug 2023</div></div></article>
+        <article class="cert cert--extra" data-cat="other"><span class="cb">AW</span><div><div class="cn">AWS Technical Professional</div><div class="cm">Amazon Web Services</div></div></article>
+        <article class="cert cert--extra" data-cat="other"><span class="cb">JU</span><div><div class="cn">Marketing Fundamentals</div><div class="cm">Jobs University · Jul 2020</div></div></article>
+        <article class="cert cert--extra" data-cat="other"><span class="cb">G</span><div><div class="cn">AdWords Mobile Certification</div><div class="cm">Google · Apr 2017</div></div></article>
+        <article class="cert cert--extra" data-cat="other"><span class="cb">G</span><div><div class="cn">The Online Marketing Fundamentals</div><div class="cm">Google</div></div></article>
+      </div>
+      <div class="cert-more-wrap rise">
+        <button class="cert-more" id="certMore" aria-expanded="false">
+          <span id="certMoreLabel">View all 38 certifications</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -868,13 +881,33 @@
   (function(){
     var btns=[].slice.call(document.querySelectorAll('.cf'));
     var cards=[].slice.call(document.querySelectorAll('.cert'));
-    if(!btns.length)return;
+    var moreBtn=document.getElementById('certMore');
+    var moreLabel=document.getElementById('certMoreLabel');
+    var moreWrap=moreBtn?moreBtn.closest('.cert-more-wrap'):null;
+    if(!cards.length)return;
+    var activeCat='all', expanded=false;
+    function apply(){
+      cards.forEach(function(c){
+        var extra=c.classList.contains('cert--extra');
+        var show=(activeCat==='all')?(expanded||!extra):(c.getAttribute('data-cat')===activeCat);
+        c.style.display=show?'flex':'none';
+      });
+      if(moreWrap)moreWrap.style.display=(activeCat==='all')?'flex':'none';
+    }
     btns.forEach(function(b){b.addEventListener('click',function(){
       btns.forEach(function(x){x.classList.remove('active')});
       b.classList.add('active');
-      var cat=b.getAttribute('data-cat');
-      cards.forEach(function(c){c.classList.toggle('hide',!(cat==='all'||c.getAttribute('data-cat')===cat))});
+      activeCat=b.getAttribute('data-cat');
+      apply();
     })});
+    if(moreBtn){moreBtn.addEventListener('click',function(){
+      expanded=!expanded;
+      moreBtn.classList.toggle('open',expanded);
+      moreBtn.setAttribute('aria-expanded',expanded?'true':'false');
+      moreLabel.textContent=expanded?'Show fewer':'View all 38 certifications';
+      apply();
+    });}
+    apply();
   })();
   (function(){
     if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
