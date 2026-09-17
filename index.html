@@ -302,6 +302,45 @@
   .proj::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.22),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none;mix-blend-mode:soft-light;z-index:2}
   .proj:hover::after{opacity:1}
 
+  .ph .phlive{margin-left:auto;width:7px;height:7px;border-radius:50%;background:var(--ok);animation:beat 2.4s ease-out infinite}
+  .dash{position:absolute;left:0;right:0;top:47px;bottom:0;padding:18px 20px;display:flex;flex-direction:column;gap:14px}
+  .dash-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+  .kpi{display:flex;flex-direction:column;min-width:0}
+  .kpi-k{font-size:12.5px;color:var(--faint)}
+  .kpi-n{font-family:var(--font-display);font-weight:700;font-size:clamp(2.3rem,6.4vw,3rem);letter-spacing:-0.045em;line-height:1;margin-top:3px}
+  .kpi-delta{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-size:12px;font-weight:600;color:var(--ok)}
+  .kpi-delta svg{width:13px;height:13px}
+  .kpi-delta em{font-style:normal;color:var(--faint);font-weight:500}
+  .ring-wrap{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none}
+  .ring{position:relative;width:64px;height:64px}
+  .ring svg{width:64px;height:64px;display:block}
+  .ring circle{fill:none;stroke-width:7}
+  .ring .ring-tr{stroke:var(--muted);opacity:.2}
+  .ring .ring-fg{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:84 100;transform:rotate(-90deg);transform-origin:50% 50%}
+  .ring .ring-c{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:15px}
+  .ring-k{font-size:11px;color:var(--faint)}
+  .chart{flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:0;color:var(--accent)}
+  .spark{width:100%;flex:1;min-height:0;overflow:visible}
+  .spark-area{fill:url(#sparkfill)}
+  .spark-line{fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+  .spark-dot{fill:var(--surface);stroke:currentColor;stroke-width:2;transform-box:fill-box;transform-origin:center}
+  .spark-dot--last{fill:currentColor}
+  .chart-x{display:flex;justify-content:space-between;font-size:9.5px;color:var(--faint);margin-top:7px;padding:0 2px}
+  .dash-bot{display:flex;gap:10px}
+  .mini{flex:1;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:var(--surface-2)}
+  .mini-k{display:block;font-size:10.5px;color:var(--faint)}
+  .mini-v{display:block;font-family:var(--font-display);font-weight:600;font-size:13px;margin-top:3px}
+  @media(prefers-reduced-motion:no-preference){
+    .ring .ring-fg{animation:ringgrow 1.2s .4s var(--ease) both}
+    .spark-line{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.5s .35s var(--ease) forwards}
+    .spark-area{opacity:0;animation:afade 1s 1.25s var(--ease) forwards}
+    .spark-dot{opacity:0;animation:dotpop .35s var(--ease) forwards}
+  }
+  @keyframes ringgrow{from{stroke-dasharray:0 100}to{stroke-dasharray:84 100}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes afade{to{opacity:1}}
+  @keyframes dotpop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+
   .rise{opacity:0;transform:translateY(24px)}
   .rise.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
   @media(prefers-reduced-motion:reduce){
@@ -355,19 +394,40 @@
         </div>
 
         <div class="panel rise" aria-hidden="true">
-          <div class="ph"><span class="d" style="background:#FF5F57"></span><span class="d" style="background:#FEBC2E"></span><span class="d" style="background:#28C840"></span><b>talent-ops · live</b></div>
-          <canvas id="net"></canvas>
-          <div class="chip c1">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span>
-            <span class="t"><span class="k">Workflow</span><span class="v">Automated</span></span>
-          </div>
-          <div class="chip c2">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span>
-            <span class="t"><span class="k">Referral hires</span><span class="v">21% → 56%</span></span>
-          </div>
-          <div class="chip c3">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M19 9l-5 5-3-3-4 4"/></svg></span>
-            <span class="t"><span class="k">Vendor spend</span><span class="v">18% → 2%</span></span>
+          <div class="ph"><span class="d" style="background:#FF5F57"></span><span class="d" style="background:#FEBC2E"></span><span class="d" style="background:#28C840"></span><b>talent-ops · live</b><span class="phlive"></span></div>
+          <div class="dash">
+            <div class="dash-top">
+              <div class="kpi">
+                <span class="kpi-k">Referral hires</span>
+                <span class="kpi-n">56%</span>
+                <span class="kpi-delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>35 pts <em>vs 21% baseline</em></span>
+              </div>
+              <div class="ring-wrap">
+                <div class="ring">
+                  <svg viewBox="0 0 66 66"><circle class="ring-tr" cx="33" cy="33" r="27" pathLength="100"/><circle class="ring-fg" cx="33" cy="33" r="27" pathLength="100"/></svg>
+                  <span class="ring-c">84%</span>
+                </div>
+                <span class="ring-k">Automated</span>
+              </div>
+            </div>
+            <div class="chart">
+              <svg class="spark" viewBox="0 0 320 92" preserveAspectRatio="none">
+                <defs><linearGradient id="sparkfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity="0.22"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+                <path class="spark-area" d="M10,83 L70,74 L130,64 L190,52 L250,35 L310,19 L310,92 L10,92 Z"/>
+                <path class="spark-line" pathLength="1" d="M10,83 L70,74 L130,64 L190,52 L250,35 L310,19"/>
+                <circle class="spark-dot" cx="10" cy="83" r="3" style="animation-delay:.6s"/>
+                <circle class="spark-dot" cx="70" cy="74" r="3" style="animation-delay:.85s"/>
+                <circle class="spark-dot" cx="130" cy="64" r="3" style="animation-delay:1.05s"/>
+                <circle class="spark-dot" cx="190" cy="52" r="3" style="animation-delay:1.25s"/>
+                <circle class="spark-dot" cx="250" cy="35" r="3" style="animation-delay:1.45s"/>
+                <circle class="spark-dot spark-dot--last" cx="310" cy="19" r="3.6" style="animation-delay:1.65s"/>
+              </svg>
+              <div class="chart-x"><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span><span>Q5</span><span>Now</span></div>
+            </div>
+            <div class="dash-bot">
+              <div class="mini"><span class="mini-k">Vendor spend</span><span class="mini-v">18% → 2%</span></div>
+              <div class="mini"><span class="mini-k">Sourcing</span><span class="mini-v">Trusted-first</span></div>
+            </div>
           </div>
         </div>
       </div>
