@@ -188,6 +188,17 @@
   :root[data-theme="dark"] .cbig{color:var(--ink)}
   .cmall{color:rgba(255,255,255,.66);font-size:16px;line-height:1.62;max-width:42ch;margin-top:var(--space-3)}
   :root[data-theme="dark"] .cmall{color:var(--muted)}
+  .cap-panel{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);padding:var(--space-4);box-shadow:var(--shadow-lg)}
+  .cap-title{font-family:var(--font-display);font-size:18px;font-weight:650;margin-bottom:18px;color:#fff}
+  .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cap-item{border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;min-height:126px}
+  .cap-item b{display:block;color:var(--accent-2);font-family:var(--font-display);font-size:15px;margin-bottom:7px}
+  .cap-item span{display:block;color:rgba(255,255,255,.68);font-size:13px;line-height:1.55}
+  :root[data-theme="dark"] .cap-panel{background:var(--surface);border-color:var(--line)}
+  :root[data-theme="dark"] .cap-title{color:var(--ink)}
+  :root[data-theme="dark"] .cap-item{border-color:var(--line)}
+  :root[data-theme="dark"] .cap-item span{color:var(--muted)}
+  @media(max-width:520px){.cap-grid{grid-template-columns:1fr}}
   .bookcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);padding:var(--space-4);display:flex;gap:var(--space-3);align-items:center;box-shadow:var(--shadow-lg)}
   :root[data-theme="dark"] .bookcard{background:var(--surface);border-color:var(--line)}
   .cover{width:112px;height:168px;border-radius:8px;background:linear-gradient(150deg,var(--accent),#0A1B8A 80%);flex:none;box-shadow:0 14px 34px rgba(0,0,0,.45);position:relative;overflow:hidden;display:block;object-fit:cover}
@@ -199,6 +210,17 @@
   :root[data-theme="dark"] .bookcard .bs{color:var(--muted)}
   .bookcard .bl{font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.5}
   :root[data-theme="dark"] .bookcard .bl{color:var(--faint)}
+  .author-sec{background:var(--surface-2)}
+  .author-grid{display:grid;grid-template-columns:1fr;gap:var(--space-5);align-items:center}
+  @media(min-width:850px){.author-grid{grid-template-columns:minmax(260px,.75fr) minmax(0,1.25fr)}}
+  .author-cover-wrap{display:flex;justify-content:center}
+  .author-cover{width:min(100%,300px);height:auto;border-radius:16px;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+  .author-copy h2{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.06;max-width:14ch;margin-bottom:18px}
+  .author-copy .book-title{font-family:var(--font-display);font-weight:650;font-size:21px;margin:22px 0 4px}
+  .author-copy .book-sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .author-copy .book-desc{color:var(--muted);font-size:16px;line-height:1.75;max-width:62ch}
+  .author-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+  .author-meta span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 11px;font-size:12.5px;color:var(--muted)}
 
   .contact{overflow:hidden}
   .contact::after{content:"";position:absolute;bottom:-30%;left:-10%;width:55%;height:80%;background:radial-gradient(closest-side,var(--accent-glow),transparent 72%);filter:blur(24px);pointer-events:none}
@@ -454,7 +476,7 @@
     </nav>
   </div>
   <div class="mobile-nav" id="mobileNav" hidden>
-    <a href="#services">Services</a><a href="#built">Projects</a><a href="#work">Approach</a><a href="#domains">Domains</a><a href="#craft">About</a><a href="#credentials">Experience</a><a href="#contact" class="mobile-contact">Contact</a>
+    <a href="#services">Services</a><a href="#built">Projects</a><a href="#work">Approach</a><a href="#domains">Domains</a><a href="#craft">About</a><a href="#author">Author</a><a href="#credentials">Experience</a><a href="#contact" class="mobile-contact">Contact</a>
   </div>
 </header>
 
@@ -518,19 +540,19 @@
     <div class="wrap">
       <p class="seclabel rise"><span class="bar-i"></span>Selected results</p>
       <h2 class="rise" style="font-size:clamp(1.8rem,4vw,2.7rem);max-width:18ch;margin-bottom:var(--space-3)">Programs that moved the numbers that matter.</h2>
-      <p class="rise" style="color:var(--muted);max-width:54ch;margin-bottom:var(--space-5);font-size:16px">At Capgemini, the gamified <b style="font-weight:600;color:var(--ink)">Referral Premier League</b> reshaped how hiring happened — more people hired through trusted referrals, far less spent on external vendors.</p>
+      <p class="rise" style="color:var(--muted);max-width:54ch;margin-bottom:var(--space-5);font-size:16px">At Capgemini, the gamified <b style="font-weight:600;color:var(--ink)">Referral Premier League</b> reshaped referral hiring — increasing the contribution of employee referrals while reducing dependency on external vendors.</p>
       <div class="results-grid">
         <div class="result rise">
           <div class="rk">Referral hires</div>
           <div class="rn"><span data-count="56">56</span><span class="pct">%</span></div>
           <span class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>up from 21%</span>
-          <p class="rd">More than half of all hires now come through referrals — up from roughly a fifth — after launching the Referral Premier League.</p>
+          <p class="rd">Referral hiring contribution increased from 21% to 56% through the Employee Referral Program and Referral Premier League.</p>
         </div>
         <div class="result rise">
           <div class="rk">Vendor dependency</div>
           <div class="rn"><span data-count="2">2</span><span class="pct">%</span></div>
           <span class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7 17 17M17 9v8H9"/></svg>down from 18%</span>
-          <p class="rd">Reliance on external hiring vendors fell from 18% to 2% — cutting cost while keeping candidate quality in-house.</p>
+          <p class="rd">External vendor dependency reduced from 18% to 2% alongside stronger employee-referral adoption.</p>
         </div>
       </div>
 
@@ -667,7 +689,7 @@
           <div class="proj-info">
             <div class="proj-cat">Product &amp; platform design</div>
             <h3 class="proj-name">Kitaab</h3>
-            <p class="proj-desc">A full marketplace for India's book world — authors list titles in any language, partners post quotes, readers discover and buy. A multi-page platform, prototyped end-to-end by prompting.</p>
+            <p class="proj-desc">A full marketplace for India's book world — authors list titles in any language, partners post quotes, readers discover and buy. A multi-page platform, prototyped end-to-end with AI-assisted product development.</p>
             <span class="proj-link">Open live demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></span>
           </div>
         </a>
@@ -683,13 +705,33 @@
           <p class="cbig rise">I work across disciplines — because modern talent teams need <em>operations, technology, design and communication</em> to work together.</p>
           <p class="cmall rise">My career has moved from graphic design and multimedia into IT infrastructure, networks and security, then into talent acquisition, recruitment operations and employer branding. That mix helps me understand the system behind the process, the operations needed to run it, and the communication needed to engage candidates and stakeholders.</p>
         </div>
-        <div class="bookcard rise">
-          <img class="cover" src="book-cover.jpg" alt="The Unspoken Bloom — book cover" width="300" height="450" loading="lazy" decoding="async">
-          <div>
-            <div class="bt">The Unspoken Bloom</div>
-            <div class="bs">Debut romance novel · Notion Press, 2026</div>
-            <div class="bl">Proof that the same hands build systems and craft stories worth finishing.</div>
+        <div class="cap-panel rise" aria-label="Four disciplines across my career">
+          <div class="cap-title">One career. Four disciplines.</div>
+          <div class="cap-grid">
+            <div class="cap-item"><b>Operations</b><span>Recruitment operations · Vendor management · Campus &amp; fresher hiring</span></div>
+            <div class="cap-item"><b>Technology</b><span>IT infrastructure · Networks &amp; security · ATS · Automation</span></div>
+            <div class="cap-item"><b>Design</b><span>Graphic design · Multimedia · Employer branding · Visual communication</span></div>
+            <div class="cap-item"><b>Communication</b><span>Candidate engagement · Campaigns · Content · Stakeholder communication</span></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="author-sec sec-pad" id="author">
+    <div class="wrap">
+      <p class="seclabel rise"><span class="bar-i"></span>Beyond the résumé · Author</p>
+      <div class="author-grid">
+        <div class="author-cover-wrap rise">
+          <img class="author-cover" src="book-cover.jpg" alt="The Unspoken Bloom — book cover" width="300" height="450" loading="lazy" decoding="async">
+        </div>
+        <div class="author-copy">
+          <h2 class="rise">I build systems for work. <span class="thin">I write stories about people.</span></h2>
+          <div class="book-title rise">The Unspoken Bloom</div>
+          <div class="book-sub rise">Debut romance novel · Notion Press · 2026</div>
+          <p class="book-desc rise"><i>The Unspoken Bloom</i> explores love, distance, memory and the things that remain unsaid, following Arjun Narayanan and Suchitra Krishnan as their lives intersect again after years apart.</p>
+          <p class="book-desc rise" style="margin-top:12px">Writing is another expression of the same creative foundation that has run through my career — observing people, shaping narratives, communicating with clarity and taking an idea from a blank page to a finished work.</p>
+          <div class="author-meta rise"><span>Published May 2026</span><span>Paperback &amp; eBook</span><span>Second-chance · Slow-burn romance</span></div>
         </div>
       </div>
     </div>
