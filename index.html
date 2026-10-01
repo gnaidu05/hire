@@ -214,13 +214,17 @@
   .author-grid{display:grid;grid-template-columns:1fr;gap:var(--space-5);align-items:center}
   @media(min-width:850px){.author-grid{grid-template-columns:minmax(260px,.75fr) minmax(0,1.25fr)}}
   .author-cover-wrap{display:flex;justify-content:center}
-  .author-cover{width:min(100%,300px);height:auto;border-radius:16px;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+  .author-cover{width:min(100%,360px);height:auto;border-radius:18px;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
   .author-copy h2{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.06;max-width:14ch;margin-bottom:18px}
   .author-copy .book-title{font-family:var(--font-display);font-weight:650;font-size:21px;margin:22px 0 4px}
-  .author-copy .book-sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .author-copy .book-sub{color:var(--muted);font-size:14px;margin-bottom:7px}
+  .author-copy .book-tagline{font-family:var(--font-display);font-style:italic;color:var(--text);font-size:16px;margin-bottom:18px}
   .author-copy .book-desc{color:var(--muted);font-size:16px;line-height:1.75;max-width:62ch}
   .author-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
   .author-meta span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 11px;font-size:12.5px;color:var(--muted)}
+  .identity-strip{margin-top:var(--space-5);display:grid;grid-template-columns:1fr;gap:10px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+  @media(min-width:760px){.identity-strip{grid-template-columns:1fr 1fr}}
+  .identity-strip div{font-size:14px;color:var(--muted);line-height:1.5}.identity-strip b{color:var(--text);font-weight:650}
 
   .contact{overflow:hidden}
   .contact::after{content:"";position:absolute;bottom:-30%;left:-10%;width:55%;height:80%;background:radial-gradient(closest-side,var(--accent-glow),transparent 72%);filter:blur(24px);pointer-events:none}
@@ -726,13 +730,17 @@
           <img class="author-cover" src="book-cover.jpg" alt="The Unspoken Bloom — book cover" width="300" height="450" loading="lazy" decoding="async">
         </div>
         <div class="author-copy">
-          <h2 class="rise">I build systems for work. <span class="thin">I write stories about people.</span></h2>
+          <h2 class="rise">I build systems for work.<br><span class="thin">I write stories about people.</span></h2>
           <div class="book-title rise">The Unspoken Bloom</div>
-          <div class="book-sub rise">Debut romance novel · Notion Press · 2026</div>
-          <p class="book-desc rise"><i>The Unspoken Bloom</i> explores love, distance, memory and the things that remain unsaid, following Arjun Narayanan and Suchitra Krishnan as their lives intersect again after years apart.</p>
-          <p class="book-desc rise" style="margin-top:12px">Writing is another expression of the same creative foundation that has run through my career — observing people, shaping narratives, communicating with clarity and taking an idea from a blank page to a finished work.</p>
-          <div class="author-meta rise"><span>Published May 2026</span><span>Paperback &amp; eBook</span><span>Second-chance · Slow-burn romance</span></div>
+          <div class="book-tagline rise">Some stories live in silence.</div>
+          <p class="book-desc rise">My debut romance novel, published by Notion Press in 2026. <i>The Unspoken Bloom</i> explores love, distance, memory and the things that remain unsaid—following Arjun and Suchitra as their lives intersect again after years apart.</p>
+          <p class="book-desc rise" style="margin-top:12px">Writing the novel represents another side of how I work: observing people, understanding emotion, shaping narratives and turning an idea into something complete.</p>
+          <div class="author-meta rise"><span>Published May 2026</span><span>Paperback &amp; eBook</span><span>Debut romance novel</span><span>Notion Press</span></div>
         </div>
+      </div>
+      <div class="identity-strip rise" aria-label="Professional and creative profile">
+        <div><b>Professional:</b> Operations × Technology × Design × Communication</div>
+        <div><b>Creative:</b> Published author of <i>The Unspoken Bloom</i></div>
       </div>
     </div>
   </section>
